@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+    <h1>Secure Card</h1>
+    <p class="subtitle">Proteção e controle do seu cartão</p>
+
+    <form onsubmit="validarLogin(event)">
+
+    <label>CPF</label>
+    <input type="text" id="cpf" placeholder="000.000.000-00" maxlength="14" required>
+
+    <label>Senha</label>
+    <div class="password-box">
+        <input type="password" id="senha" placeholder="Digite sua senha" required minlength="4" maxlength="14">
+        <span onclick="toggleSenha()"></span>
+    </div>
+
+    <button type="submit">Entrar</button>
+
+</form>
+</div>
+<script src="script.js"></script>
+</body>
+</html>

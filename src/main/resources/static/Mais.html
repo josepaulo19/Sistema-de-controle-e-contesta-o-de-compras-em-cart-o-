@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais</title>
+    <link rel="stylesheet" href="Mais.css">
+</head>
+<body>
+   <header class="topo-config">
+    <div class="alinhamento-topo">
+        <a href="javascript:history.back()" class="btn-voltar">← Voltar</a>
+        <h1>Últimas Configurações</h1> 
+    </div>
+    </header>
+
+    <main class="conteudo">
+        <section class="secao">
+            <h2>Dados da Conta</h2>
+            <div class="cartao-dado">
+                <div class="icone">👤</div>
+                <div class="info">
+                    <span class="titulo">CPF</span>
+                    <span class="valor" id="cpf-tela">***.***.***-**</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="secao">
+            <h2>Segurança</h2>
+            <div class="cartao-dado">
+                <div class="icone">🔒</div>
+                <div class="info">
+                    <span class="titulo">Senha</span>
+                    <span class="valor">••••••••</span>
+                </div>
+            </div>
+        </section>
+
+        <button class="btn-sair" onclick="sairDaConta()">Sair da conta</button>
+    </main>
+    <div class="footer">
+    <div class="item ativo" onclick="irPara('inicio')">
+        <span>🏠</span>
+        <p>Início</p>
+    </div>
+
+    <div class="item" onclick="irPara('cartoes')">
+        <span>💳</span>
+        <p>Cartões</p>
+    </div>
+
+    <div class="item" onclick="irPara('seguranca')">
+        <span>🛡</span>
+        <p>Segurança</p>
+    </div>
+    <div class="item" onclick="irPara('Mais')">
+        <span>⚙️</span>
+        <p>Mais</p>
+    </div>
+   
+</div>
+    <script src="Mais.js"></script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Histórico de Compras</title>
+    <link rel="stylesheet" href="compras.css">
+</head>
+<body>
+    <div class="topo-pagina">
+        <button class="btn-voltar" onclick="window.history.back()">⬅ Voltar</button>
+        <h2>Últimas Compras</h2>
+    </div>
+        <main class="container">
+    <div id="lista-de-compras-container">
+        </div>
+        </main>
+
+    </div>
+    <div class="footer">
+    <div class="item ativo" onclick="irPara('inicio')">
+        <span>🏠</span>
+        <p>Início</p>
+    </div>
+
+    <div class="item" onclick="irPara('cartoes')">
+        <span>💳</span>
+        <p>Cartões</p>
+    </div>
+
+    <div class="item" onclick="irPara('seguranca')">
+        <span>🛡</span>
+        <p>Segurança</p>
+    </div>
+    <div class="item" onclick="irPara('Mais')">
+        <span>⚙️</span>
+        <p>Mais</p>
+    </div>
+   
+</div>
+ <script src="dadosCompras.js"></script>
+ <script src="compras.js"></script>
+</body>
+</html>

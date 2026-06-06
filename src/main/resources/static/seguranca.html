@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Segurança</title>
+     <link rel="stylesheet" href="seguranca.css">
+</head>
+<body>
+    <button class="btn-voltar" onclick="voltarPagina()">⬅ Voltar</button>
+    <div class="topo">
+    <h2>🔒 Segurança</h2>
+    <p>Dicas para proteger sua conta</p>
+</div>
+
+<div class="container">
+
+    <!-- PHISHING -->
+    <div class="card perigo">
+        <h3>🎣 Phishing</h3>
+        <p>Tentativa de roubo de dados pessoais através de e-mails, SMS ou sites falsos</p>
+
+        <div class="alerta">⚠️ NUNCA clique em links suspeitos ou forneça dados bancários por e-mail</div>
+
+        <ul>
+            <li>E-mails pedindo atualização de dados bancários</li>
+            <li>SMS solicitando confirmação de compras suspeitas</li>
+            <li>Sites falsos imitando páginas de bancos</li>
+        </ul>
+    </div>
+
+    <!-- CLONAGEM -->
+    <div class="card alerta-card">
+        <h3>💳 Clonagem de Cartão</h3>
+        <p>Cópia dos dados do cartão em máquinas adulteradas</p>
+
+        <div class="alerta">⚠️ Sempre verifique a máquina antes de usar</div>
+
+        <ul>
+            <li>Dispositivos estranhos em caixas eletrônicos</li>
+            <li>Máquinas suspeitas em estabelecimentos</li>
+            <li>Pedido de senha em locais inseguros</li>
+        </ul>
+    </div>
+
+    <!-- FALSOS ATENDENTES -->
+    <div class="card info">
+        <h3>📞 Falsos Atendentes</h3>
+        <p>Golpistas se passam por funcionários do banco</p>
+
+        <div class="alerta">⚠️ O banco NUNCA pede senha por telefone</div>
+
+        <ul>
+            <li>Ligações pedindo senha</li>
+            <li>Pedido de código de verificação</li>
+            <li>Instalação de apps remotos</li>
+        </ul>
+    </div>
+
+</div>
+<div class="footer">
+    <div class="item ativo" onclick="irPara('inicio')">
+        <span>🏠</span>
+        <p>Início</p>
+    </div>
+
+    <div class="item" onclick="irPara('cartoes')">
+        <span>💳</span>
+        <p>Cartões</p>
+    </div>
+
+    <div class="item" onclick="irPara('seguranca')">
+        <span>🛡</span>
+        <p>Segurança</p>
+    </div>
+    <div class="item" onclick="irPara('Mais')">
+        <span>⚙️</span>
+        <p>Mais</p>
+    </div>
+   
+</div>
+<script src="seguranca.js"></script>
+</body>
+</html>
