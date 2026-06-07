@@ -1,0 +1,4 @@
+Arquivos do banco PostgreSQL integrados ao projeto.
+1. Execute: docker compose up -d
+2. Banco: secure_card
+3. Ajuste application.properties conforme necessário.

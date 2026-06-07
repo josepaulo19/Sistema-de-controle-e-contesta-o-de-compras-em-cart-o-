@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+     <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <div class="topo">
+    <p>Bem-vindo(a),</p>
+    <h2 id="nomeUsuario">Nome Sobrenome</h2>
+</div>
+
+<div class="cartao-select" onclick="selecionarCartao()">
+    <p>💳 Selecione um cartão</p>
+</div>
+
+<div class="cards">
+    <div class="card" onclick="irPara('compras')" style="cursor: pointer;">
+        <p>📈 Transações</p>
+        <h3 id="qtd-transacoes">0</h3> <p>Este mês</p>
+    </div>
+    <div class="card">
+        <p>⚠️ Contestadas</p>
+        <h3 id="qtd-contestadas">0</h3> <p>Em análise</p>
+    </div>
+</div>
+<div class="alertas-header">
+    <h3>Alertas Recentes</h3>
+</div>
+<div class="alerta alerta-amarelo" onclick="irPara('compras')">
+    <div class="dot amarelo"></div>
+    <div class="conteudo">
+        <strong>Compra detectada</strong>
+       <p id="dados-compra-recente">Carregando última compra...</p>
+    </div>
+    <div class="seta"></div>
+</div>
+<div class="alerta alerta-azul" onclick="abrirListaProtocolos()" style="cursor: pointer;">
+    <strong>Contestação em análise</strong>
+    <p id="status-contestações">Nenhuma contestação ativa</p>
+</div>
+
+<div id="modal-protocolos" class="modal-protocolos" style="display: none;">
+    <div class="modal-conteudo">
+        <div class="modal-topo">
+            <h3>Seus Protocolos em Análise</h3>
+            <button onclick="fecharListaProtocolos()" class="btn-fechar">X</button>
+        </div>
+        <ul id="lista-protocolos-ul"></ul>
+    </div>
+</div>
+    <div class="seta"></div>
+</div>
+<div class="footer">
+    <div class="item ativo" onclick="irPara('inicio')">
+        <span>🏠</span>
+        <p>Início</p>
+    </div>
+
+    <div class="item" onclick="irPara('cartoes')">
+        <span>💳</span>
+        <p>Cartões</p>
+    </div>
+
+    <div class="item" onclick="irPara('seguranca')">
+        <span>🛡</span>
+        <p>Segurança</p>
+    </div>
+    <div class="item" onclick="irPara('Mais')">
+        <span>⚙️</span>
+        <p>Mais</p>
+    </div>
+   
+</div>
+<script src="dadosCompras.js"></script>
+<script src="dashboard.js"></script>
+</body>
+</html>

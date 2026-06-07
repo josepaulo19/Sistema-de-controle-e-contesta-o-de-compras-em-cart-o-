@@ -1,0 +1,166 @@
+/* Container que deixa o botão e o título na mesma linha */
+.alinhamento-topo {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+    margin-bottom: 8px;
+}
+
+
+.btn-voltar {
+    color: #ffffff; 
+    text-decoration: none; 
+    font-size: 16px;
+    font-weight: 500;
+    white-space: nowrap; /* Impede que o texto quebre em duas linhas */
+    transition: opacity 0.2s;
+}
+
+.btn-voltar:hover {
+    opacity: 0.8; 
+}
+
+
+.topo-config h1 {
+    font-size: 24px;
+    color: white;
+    margin: 0; 
+}
+
+.subtitulo {
+    font-size: 14px;
+    font-weight: 300;
+    color: rgba(255, 255, 255, 0.8); 
+    margin-top: 4px;
+}
+* {
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #f5f5f5; 
+}
+
+.topo-config {
+    background-color: #a8002a; 
+    color: white;
+    padding: 40px 20px 30px 20px;
+}
+
+.topo-config h1 {
+    font-size: 24px;
+    margin-bottom: 8px;
+}
+
+.topo-config p {
+    font-size: 14px;
+    font-weight: 300;
+}
+
+.conteudo {
+    padding: 24px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.secao {
+    margin-bottom: 32px;
+}
+
+.secao h2 {
+    font-size: 18px;
+    color: #002244; 
+}
+
+.cartao-dado {
+    background-color: white;
+    border: 1px solid #e0e0e0;
+    border-radius: 12px;
+    padding: 16px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.icone {
+    background-color: #f0f2f5;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.info {
+    display: flex;
+    flex-direction: column;
+}
+
+.titulo {
+    font-size: 15px;
+    font-weight: bold;
+    color: #002244;
+    margin-bottom: 4px;
+}
+
+.valor {
+    font-size: 14px;
+    color: #666;
+}
+
+
+.btn-sair {
+    width: 100%;
+    background-color: transparent;
+    color: #ce0033;
+    border: 2px solid #ce0033;
+    padding: 14px;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: all 0.2s;
+}
+
+.btn-sair:hover {
+    background-color: #ce0033;
+    color: white;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #ccc;
+}
+
+.item {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+    cursor: pointer;
+}
+
+.item span {
+    font-size: 20px;
+    display: block;
+}
+
+.item.ativo {
+    color: #b3001b;
+    font-weight: bold;
+}
+/*rodapé não esconde conteúdo*/
+body {
+    padding-bottom: 80px;
+}

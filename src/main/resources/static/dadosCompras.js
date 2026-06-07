@@ -1,0 +1,31 @@
+const LISTA_DE_COMPRAS = [
+    { id:1,cpf:"12345678900",loja: "Steam Games", valor: "R$ 89,90", data: "21 de mai. de 2026", icone: "🎮" },
+    { id:2,cpf:"12345678900",loja: "Netflix", valor: "R$ 45,90", data: "20 de abr. de 2026", icone: "📺" },
+    { id:3,cpf:"55555555555",loja: "Uber", valor: "R$ 22,50", data: "19 de abr. de 2026", icone: "🚗" },
+    { id:4,cpf:"55555555555",loja: "Mercado Livre", valor: "R$ 350,00", data: "18 de abr. de 2026", icone: "🛒" },
+    { id:5,cpf:"11111111111", loja: "Amazon Prime", valor: "R$ 19,90", data: "15 de abr. de 2026", icone: "📦" },
+    { id:6,cpf:"11111111111", loja: "Spotify Premium", valor: "R$ 24,90", data: "21 de mai. de 2026", icone: "🎵" },
+    { id:7,cpf:"22233344455", loja: "iFood *Restaurante", valor: "R$ 89,90", data: "20 de mai. de 2026", icone: "🍔" },
+    { id:8,cpf:"22233344455", loja: "Posto Ipiranga", valor: "R$ 120,00", data: "10 de abr. de 2026", icone: "⛽" },
+    { id:9,cpf:"22233344455", loja: "Lojas Americanas", valor: "R$ 65,40", data: "05 de abr. de 2026", icone: "🛍️" },
+    { id:10,cpf:"33344455566", loja: "Droga Raia", valor: "R$ 42,10", data: "02 de abr. de 2026", icone: "💊" },
+    { id:11,cpf:"33344455566", loja: "Starbucks Coffee", valor: "R$ 18,50", data: "28 de mar. de 2026", icone: "☕" },
+    { id:12,cpf:"33344455566", loja: "Latam Airlines", valor: "R$ 840,00", data: "15 de mar. de 2026", icone: "✈️" },
+    { id:13,cpf:"12345678900", loja:"Kabum", valor:"R$ 249,90", data:"10 de jun. de 2026", icone:"💻" },
+    { id:14,cpf:"12345678900", loja:"PlayStation Store", valor:"R$ 79,90", data:"08 de jun. de 2026", icone:"🎮" },
+    { id:15,cpf:"12345678900", loja:"Burger King", valor:"R$ 32,50", data:"05 de jun. de 2026", icone:"🍔" },
+    { id:16,cpf:"55555555555", loja:"Shell Box", valor:"R$ 180,00", data:"12 de jun. de 2026", icone:"⛽" },
+    { id:17,cpf:"55555555555", loja:"Decathlon", valor:"R$ 129,90", data:"09 de jun. de 2026", icone:"🏃" },
+    { id:18,cpf:"55555555555", loja:"Outback", valor:"R$ 145,80", data:"04 de jun. de 2026", icone:"🍽️" },
+    { id:19,cpf:"11111111111", loja:"Shopee", valor:"R$ 58,90", data:"11 de jun. de 2026", icone:"🛍️" },
+    { id:20,cpf:"11111111111", loja:"Google One", valor:"R$ 9,99", data:"07 de jun. de 2026", icone:"☁️" },
+    { id:21,cpf:"11111111111", loja:"McDonald's", valor:"R$ 41,70", data:"02 de jun. de 2026", icone:"🍟" },
+    { id:22,cpf:"22233344455", loja:"Magazine Luiza", valor:"R$ 499,00", data:"14 de jun. de 2026", icone:"📱" },
+    { id:23,cpf:"22233344455", loja:"Cinemark", valor:"R$ 52,00", data:"06 de jun. de 2026", icone:"🎬" },
+    { id:24,cpf:"22233344455", loja:"Petz", valor:"R$ 87,30", data:"01 de jun. de 2026", icone:"🐶" },
+    { id:25,cpf:"33344455566", loja:"Airbnb", valor:"R$ 620,00", data:"13 de jun. de 2026", icone:"🏠" },
+    { id:26,cpf:"33344455566", loja:"Renner", valor:"R$ 215,40", data:"08 de jun. de 2026", icone:"👕" },
+    { id:27,cpf:"33344455566", loja:"Apple Services", valor:"R$ 14,90", data:"03 de jun. de 2026", icone:"🍎" }
+
+    
+];

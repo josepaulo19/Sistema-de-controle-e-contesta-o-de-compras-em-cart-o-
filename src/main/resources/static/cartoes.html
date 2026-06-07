@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cartões</title>
+    <link rel="stylesheet" href="cartoes.css">
+</head>
+<body>
+    <div class="topo-cartoes">
+    <h1>Meus Cartões</h1>
+    <p>Selecione o cartão que deseja gerenciar</p>
+</div>
+    <div class="cartao">
+    <div class="cartao-pro"onclick="selecionarCartaoCredito('5678')()">
+
+    <div class="topo">
+        <div>
+            <h3>Gold</h3>
+            <p class="numero" id="cartao-gold">•••• •••• •••• 0000</p>
+        </div>
+        <div class="icone">💳</div>
+    </div>
+
+    <div class="limite">
+        <div class="limite-topo">
+            <span>Limite disponível</span>
+            <span></span>
+        </div>
+
+        <div class="barra">
+            <div class="progresso"></div>
+        </div>
+
+        <div class="valores">
+            <strong></strong>
+            <span>R$ 8.000,00</span>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="rodape">
+        <span>Bandeira</span>
+        <div class="tag">Mastercard</div>
+    </div>
+    </div>
+    <div class="cartao-pro2"onclick="selecionarCartaoCredito('1245')()">
+
+    <div class="topo2">
+        <div>
+            <h3>Platinum</h3>
+            <p class="numero2" id="cartao-platinum">•••• •••• •••• 0000</p>
+        </div>
+        <div class="icone">💳</div>
+    </div>
+
+    <div class="limite2">
+        <div class="limite-topo2">
+            <span>Limite disponível</span>
+            <span></span>
+        </div>
+
+        <div class="barra2">
+            <div class="progresso2"></div>
+        </div>
+
+        <div class="valores2">
+            <strong></strong>
+            <span>de R$ 28.000,00</span>
+        </div>
+    </div>
+
+    <hr>
+
+    <div class="rodape2">
+        <span>Bandeira</span>
+        <div class="tag2">Mastercard</div>
+    </div>
+
+</div></div>
+<div class="footer">
+    <div class="item ativo" onclick="irPara('inicio')">
+        <span>🏠</span>
+        <p>Início</p>
+    </div>
+
+    <div class="item" onclick="irPara('cartoes')">
+        <span>💳</span>
+        <p>Cartões</p>
+    </div>
+
+    <div class="item" onclick="irPara('seguranca')">
+        <span>🛡</span>
+        <p>Segurança</p>
+    </div>
+    <div class="item" onclick="irPara('Mais')">
+        <span>⚙️</span>
+        <p>Mais</p>
+    </div>
+</div>
+    <script src="cartoes.js"></script>
+</body>
+</html>

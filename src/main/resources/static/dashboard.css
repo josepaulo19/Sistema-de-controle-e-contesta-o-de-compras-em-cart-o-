@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f2f2f2;
+}
+
+.topo {
+    background: linear-gradient(135deg, #b3001b, #8b0015);
+    color: white;
+    padding: 30px;
+}
+
+.cartao-select {
+    background: #ddd;
+    margin: -20px auto 20px;
+    width: 80%;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.cartao-select:hover{
+    transform: scale(1.05);
+}
+.cards {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.card {
+    background: white;
+    width: 40%;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0px 2px 10px rgba(0,0,0,0.1);
+}
+.alertas-header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+/* Fundo escuro atrás da janelinha de protocolos */
+.modal-protocolos {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Caixa branca do conteúdo */
+.modal-conteudo {
+    background-color: white;
+    padding: 24px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 450px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+}
+
+.modal-topo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+    color: #002244;
+}
+
+.btn-fechar {
+    background: none;
+    border: none;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    color: #cc0000;
+}
+
+/* Lista de protocolos */
+#lista-protocolos-ul {
+    list-style: none;
+    max-height: 200px;
+    overflow-y: auto; /* Adiciona barra de rolagem se tiver muitos protocolos */
+}
+
+#lista-protocolos-ul li {
+    padding: 12px;
+    border-bottom: 1px solid #f0f0f0;
+    color: #333;
+    font-family: monospace;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+#lista-protocolos-ul li::before {
+    content: "📄 ";
+    margin-right: 8px;
+}
+
+.alerta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    margin: 10px 20px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.alerta:hover {
+    transform: scale(1.02);
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.conteudo {
+    flex: 1;
+    margin-left: 10px;
+}
+
+.seta {
+    font-size: 20px;
+}
+
+/* CORES */
+
+.alerta-amarelo {
+    background: #f5ecd7;
+    border: 1px solid #e0b84c;
+}
+
+.alerta-azul {
+    background: #dbeafe;
+    border: 1px solid #3b82f6;
+}
+
+.amarelo { background: #e0b84c; }
+.azul { background: #3b82f6; }
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    height: 70px;
+    background: #f2f2f2;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 1px solid #ccc;
+}
+
+.item {
+    text-align: center;
+    font-size: 12px;
+    color: #555;
+    cursor: pointer;
+}
+
+.item span {
+    font-size: 20px;
+    display: block;
+}
+
+.item.ativo {
+    color: #b3001b;
+    font-weight: bold;
+}
+#lista-protocolos-ul li {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    line-height: 1.6;
+}
+/*rodapé não esconde conteúdo*/
+body {
+    padding-bottom: 80px;
+}

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contestar Compra</title>
+    <link rel="stylesheet" href="contestar.css">
+</head>
+<body>
+    
+    <header class="topo-pagina">
+        <button class="btn-voltar" onclick="window.history.back()">← Voltar</button>
+        <h2>Selecione o motivo da contestação</h2>
+    </header>
+
+    <main class="container">
+        <div class="lista-opcoes">
+            
+            <div class="opcao-card" onclick="selecionarOpcao(this)">
+                <div class="opcao-conteudo">
+                    <h3>Não reconheço esta compra</h3>
+                    <p>Você não realizou ou não autorizou esta transação.</p>
+                </div>
+                <div class="checkbox-custom"></div>
+            </div>
+
+            <div class="opcao-card" onclick="selecionarOpcao(this)">
+                <div class="opcao-conteudo">
+                    <h3>Produto ou serviço não recebido</h3>
+                    <p>Você pagou mas não recebeu o que foi comprado.</p>
+                </div>
+                <div class="checkbox-custom"></div>
+            </div>
+
+            <div class="opcao-card" onclick="selecionarOpcao(this)">
+                <div class="opcao-conteudo">
+                    <h3>Valor cobrado incorreto</h3>
+                    <p>O valor cobrado na fatura é diferente do combinado ou do comprovante.</p>
+                </div>
+                <div class="checkbox-custom"></div>
+            </div>
+
+        </div>
+
+        <div class="detalhes-container">
+            <label for="descricao-ocorrido">Conte-nos mais sobre o ocorrido (opcional)</label>
+            <textarea 
+                id="descricao-ocorrido" 
+                placeholder="Escreva aqui detalhes que ajudem a entender o problema..." 
+                rows="5"
+            ></textarea>
+        </div>
+
+        <button class="btn-enviar" onclick="enviarContestacao()">Enviar contestação</button>
+    </main>
+
+    <script src="dadosCompras.js"></script>
+    <script src="contestar.js"></script>
+</body>
+</html>
