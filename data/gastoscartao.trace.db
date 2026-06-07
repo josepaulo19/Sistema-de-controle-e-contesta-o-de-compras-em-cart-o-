@@ -1,0 +1,18 @@
+2026-06-06 23:14:15.477503-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PESSOA" not found; SQL statement:
+INSERT INTO PESSOA (ID, NOME, CPF, SENHA)
+VALUES (3, 'José Paulo', '11122233344', '123') [42102-224]
+2026-06-06 23:14:28.589350-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PESSOA" not found; SQL statement:
+INSERT INTO PESSOA (ID, NOME, CPF, SENHA)
+VALUES (3, 'José Paulo', '11122233344', '123') [42102-224]
+2026-06-06 23:14:42.251923-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PESSOA" not found; SQL statement:
+SELECT * FROM PESSOA [42102-224]
+2026-06-06 23:14:43.094042-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PESSOA" not found; SQL statement:
+SELECT * FROM PESSOA [42102-224]
+2026-06-06 23:16:24.261671-03:00 jdbc[13]: exception
+org.h2.jdbc.JdbcSQLSyntaxErrorException: Table "PESSOA" not found; SQL statement:
+INSERT INTO PESSOA (ID, NOME, CPF, SENHA)
+VALUES (4, 'José Paulo', '11122233344', '123') [42102-224]

@@ -2,11 +2,13 @@ document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById("lista-de-compras-container");
     if (!container || typeof LISTA_DE_COMPRAS === 'undefined') return;
 
-    // 1. Pega o cartão ativo
-    const cartaoAtivo = sessionStorage.getItem("cartaoAtivo") || "1111";
+   const cpfLogado =
+    sessionStorage.getItem("cpfDigitado");
 
-    // 2. Filtra a lista global deixando passar apenas as deste cartão
-    const comprasFiltradas = LISTA_DE_COMPRAS.filter(compra => compra.cartao === cartaoAtivo);
+const comprasFiltradas =
+    LISTA_DE_COMPRAS.filter(
+        compra => compra.cpf === cpfLogado
+    );
 
     container.innerHTML = "";
 

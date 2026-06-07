@@ -29,25 +29,52 @@ function entrar() {
     // redireciona para o dashboard
     window.location.href = "dashboard.html";
 }
-function validarLogin(event) {
+async function validarLogin(event) {
+    console.log("FUNÇÃO LOGIN EXECUTOU");
     event.preventDefault();
-
+      
     const cpf = document.getElementById("cpf").value;
     const senha = document.getElementById("senha").value;
 
-    const cpfLimpo = cpf.replace(/\D/g, "");
+    try {
 
-    if (cpfLimpo.length !== 11) {
-        alert("CPF inválido!");
-        return;
-    }
+        const resposta = await fetch(
+            "http://localhost:8080/api/login",
+            {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    cpf: cpf,
+                    senha: senha
+                })
+            }
+        );
 
-    if (senha.length < 4) {
-        alert("Senha inválida!");
-        return;
-    }
-    sessionStorage.setItem("cpfDigitado", cpf);
+        if (resposta.ok) {
+
+    const usuario = await resposta.json();
+    console.log("Resposta do backend:", usuario);
+
+    sessionStorage.setItem("cpfDigitado", usuario.cpf);
+    sessionStorage.setItem("nomeUsuario", usuario.nome);
+    console.log("Nome salvo:", sessionStorage.getItem("nomeUsuario"));
 
     window.location.href = "dashboard.html";
-}
 
+
+
+        } else {
+
+            alert("CPF ou senha inválidos");
+
+        }
+
+    } catch (erro) {
+
+        console.error(erro);
+        alert("Não foi possível conectar ao servidor");
+
+    }
+}

@@ -21,13 +21,20 @@ function enviarContestacao() {
     const numeroAleatorio = Math.floor(1000 + Math.random() * 9000);
     const protocoloGerado = `EXMP-${numeroAleatorio}`;
 
-    // Descobre qual cartão está ativo
-    const cartaoAtivo = sessionStorage.getItem("cartaoAtivo") || "1245";
+    const cpfLogado =
+    sessionStorage.getItem("cpfDigitado");
 
-    // Cria uma chave única para este cartão,
-    let listaProtocolos = JSON.parse(sessionStorage.getItem(`listaProtocolos_${cartaoAtivo}`)) || [];
-    listaProtocolos.push(protocoloGerado);
-    sessionStorage.setItem(`listaProtocolos_${cartaoAtivo}`, JSON.stringify(listaProtocolos));
+let listaProtocolos =
+JSON.parse(
+    sessionStorage.getItem(`listaProtocolos_${cpfLogado}`)
+) || [];
+
+listaProtocolos.push(protocoloGerado);
+
+sessionStorage.setItem(
+    `listaProtocolos_${cpfLogado}`,
+    JSON.stringify(listaProtocolos)
+);
 
     alert(`Contestação enviada com sucesso!\n\nProtocolo: ${protocoloGerado}`);
     window.location.href = "dashboard.html";
