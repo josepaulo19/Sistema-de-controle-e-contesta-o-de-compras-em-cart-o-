@@ -2,17 +2,22 @@ document.addEventListener("DOMContentLoaded", function() {
     const container = document.getElementById("lista-de-compras-container");
     if (!container || typeof LISTA_DE_COMPRAS === 'undefined') return;
 
-   const cpfLogado =
-    sessionStorage.getItem("cpfDigitado");
+    const cpfLogado = sessionStorage.getItem("cpfDigitado") || "";
+    const cpfLimpo = cpfLogado.replace(/\D/g, "");
 
-const comprasFiltradas =
-    LISTA_DE_COMPRAS.filter(
-        compra => compra.cpf === cpfLogado
+    // Filtra as compras do usuário logado
+    const comprasFiltradas = LISTA_DE_COMPRAS.filter(compra => 
+        String(compra.cpf).startsWith(cpfLimpo)
     );
 
     container.innerHTML = "";
 
-    // 3. Desenha apenas as compras filtradas
+    if (comprasFiltradas.length === 0) {
+        container.innerHTML = "<p style='padding: 20px; color: #666;'>Nenhuma compra encontrada para este CPF.</p>";
+        return;
+    }
+
+    // Desenha as compras filtradas
     comprasFiltradas.forEach(compra => {
         const card = document.createElement("div");
         card.className = "compra-card";
@@ -37,30 +42,18 @@ const comprasFiltradas =
                 </button>
             </div>
         `;
-
         container.appendChild(card);
     });
 });
+
 function irParaContestacao(cartaoDaCompra) {
-    // Garante que o sessionStorage lembre qual era o cartão dessa compra específica
     sessionStorage.setItem("cartaoAtivo", cartaoDaCompra);
-    // Agora sim vai para a tela de contestação
     window.location.href = "contestar.html";
 }
+
 function irPara(pagina) {
-    if (pagina === "inicio") {
-        window.location.href = "dashboard.html";
-    }
-
-    if (pagina === "cartoes") {
-         window.location.href = "cartoes.html";
-    }
-
-    if (pagina === "seguranca") {
-         window.location.href = "seguranca.html";
-    }
-     if (pagina === "Mais") {
-           window.location.href = "Mais.html";
-    }
-    
+    if (pagina === "inicio") window.location.href = "dashboard.html";
+    if (pagina === "cartoes") window.location.href = "cartoes.html";
+    if (pagina === "seguranca") window.location.href = "seguranca.html";
+    if (pagina === "Mais") window.location.href = "Mais.html";
 }

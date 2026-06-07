@@ -179,6 +179,14 @@ body {
     color: #b3001b;
     font-weight: bold;
 }
+#lista-protocolos-ul li {
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 8px;
+    background: #f7f7f7;
+    border: 1px solid #ddd;
+    line-height: 1.6;
+}
 /*rodapé não esconde conteúdo*/
 body {
     padding-bottom: 80px;
