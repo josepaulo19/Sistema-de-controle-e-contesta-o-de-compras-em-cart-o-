@@ -1,36 +1,58 @@
 // EXECUTA AUTOMATICAMENTE ASSIM QUE O DASHBOARD ABRE NA TELA
 document.addEventListener("DOMContentLoaded", function() {
-    
-    // 1. Descobre qual o cartão ativo (Se não achar, usa o padrão "1245")
-    const cartaoAtivo = sessionStorage.getItem("cartaoAtivo") || "1245";
 
-    // ==========================================
-    // 2. ATUALIZAÇÃO DAS TRANSAÇÕES DO CARTÃO ATIVO
-    // ==========================================
-    const elementoTransacoes = document.getElementById("qtd-transacoes");
-    
-    if (typeof LISTA_DE_COMPRAS !== 'undefined') {
-        // Filtra a lista global deixando passar apenas as deste cartão específico
-        const comprasFiltradas = LISTA_DE_COMPRAS.filter(compra => compra.cartao === cartaoAtivo);
-        
-        // Atualiza o card de Transações com a quantidade filtrada
-        if (elementoTransacoes) {
-            elementoTransacoes.innerText = comprasFiltradas.length;
-        }
+        const nomeUsuario = sessionStorage.getItem("nomeUsuario");
 
-        // Atualiza o alerta amarelo de "Compra detectada" com a mais recente DESTE cartão
-        const elementoAlertaCompra = document.getElementById("dados-compra-recente");
-        if (elementoAlertaCompra && comprasFiltradas.length > 0) {
-            elementoAlertaCompra.innerText = `${comprasFiltradas[0].loja} - ${comprasFiltradas[0].valor}`;
-        }
+    if (nomeUsuario) {
+        document.getElementById("nomeUsuario").innerText = nomeUsuario;
+    }
+    
+    const cpfLogado =
+    sessionStorage.getItem("cpfDigitado");
+
+const elementoTransacoes =
+    document.getElementById("qtd-transacoes");
+
+if (typeof LISTA_DE_COMPRAS !== "undefined") {
+
+    const comprasFiltradas =
+        LISTA_DE_COMPRAS.filter(
+            compra => compra.cpf === cpfLogado
+        );
+
+    if (elementoTransacoes) {
+        elementoTransacoes.innerText =
+            comprasFiltradas.length;
     }
 
-    // ==========================================
-    // 3. ATUALIZAÇÃO DAS CONTESTAÇÕES DO CARTÃO ATIVO
-    // ==========================================
-    let listaProtocolos = JSON.parse(sessionStorage.getItem(`listaProtocolos_${cartaoAtivo}`)) || [];
-    const elementoContador = document.getElementById("qtd-contestadas");
-    const elementoStatus = document.getElementById("status-contestações");
+    const elementoAlertaCompra =
+        document.getElementById("dados-compra-recente");
+
+    if (
+        elementoAlertaCompra &&
+        comprasFiltradas.length > 0
+    ) {
+
+        const ultimaCompra =
+            comprasFiltradas[
+                comprasFiltradas.length - 1
+            ];
+
+        elementoAlertaCompra.innerText =
+            `${ultimaCompra.loja} - ${ultimaCompra.valor}`;
+    }
+
+    }
+let listaProtocolos =
+    JSON.parse(
+        sessionStorage.getItem(`listaProtocolos_${cpfLogado}`)
+    ) || [];
+
+const elementoContador =
+    document.getElementById("qtd-contestadas");
+
+const elementoStatus =
+    document.getElementById("status-contestações");
 
     if (listaProtocolos.length > 0) {
         if (elementoContador) {
@@ -49,16 +71,14 @@ document.addEventListener("DOMContentLoaded", function() {
         if (elementoStatus) elementoStatus.innerText = "Nenhuma contestação ativa";
     }
 });
-
-
-// ========================================================
-// FUNÇÕES DE AÇÃO (FICAM FORA DO DOMCONTENTLOADED)
-// ========================================================
-
-// FUNÇÃO PARA ABRIR O MODAL E CRIAR A LISTA NA TELA DE ACORDO O CARTÃO ATIVO
 function abrirListaProtocolos() {
-    const cartaoAtivo = sessionStorage.getItem("cartaoAtivo") || "1245";
-    let listaProtocolos = JSON.parse(sessionStorage.getItem(`listaProtocolos_${cartaoAtivo}`)) || [];
+   const cpfLogado =
+sessionStorage.getItem("cpfDigitado");
+
+let listaProtocolos =
+JSON.parse(
+    sessionStorage.getItem(`listaProtocolos_${cpfLogado}`)
+) || [];
     
     // Só abre se houver algum protocolo criado para este cartão
     if (listaProtocolos.length === 0) {

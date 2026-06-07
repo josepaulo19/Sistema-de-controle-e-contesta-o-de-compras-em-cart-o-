@@ -29,6 +29,12 @@ public class Pessoa {
     @Column(length = 20)
     private String telefone;
 
+    @Column(unique = true, length = 11)
+    private String cpf;
+
+    @Column(length = 200)
+    private String senha;
+
     @Column(nullable = false)
     private LocalDateTime criadoEm = LocalDateTime.now();
 
@@ -78,6 +84,12 @@ public class Pessoa {
     public void setTelefone(String telefone) {
         this.telefone = telefone;
     }
+
+    public String getCpf() { return cpf; }
+    public void setCpf(String cpf) { this.cpf = cpf; }
+
+    public String getSenha() { return senha; }
+    public void setSenha(String senha) { this.senha = senha; }
 
     public LocalDateTime getCriadoEm() {
         return criadoEm;
